@@ -1,0 +1,1 @@
+CREATE TABLE user_info (id  bigserial not null, password varchar(255), username varchar(255) not null, primary key (id))

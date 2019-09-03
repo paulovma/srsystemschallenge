@@ -1,0 +1,1 @@
+CREATE TABLE state (id  bigserial not null, uf varchar(2), primary key (id));

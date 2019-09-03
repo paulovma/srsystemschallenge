@@ -1,0 +1,1 @@
+INSERT INTO user_info (username, password) VALUES ('challenge', '$2a$10$CwqWGN29NpWspsM9MKvHr.pJLwfAfJ2EY9rAg3gw4dh/.GkaFtrB6');

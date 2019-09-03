@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: challenge
+  data:
+    rest:
+      basePath: '/api'
+  servlet:
+    multipart:
+      max-request-size: 250MB
+      max-file-size: 250MB
+  datasource:
+    username: challenge
+    password: 123123
+    url: jdbc:postgresql://localhost:5432/challenge
+  jpa:
+    open-in-view: false
+    show-sql: true
+    generate-ddl: true
+#    hibernate:
+#      ddl-auto: update
+#      sql: debug
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  jwt:
+    secret: srsystemschallenge
