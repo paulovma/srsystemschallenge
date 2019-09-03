@@ -1,9 +1,6 @@
 spring:
   application:
     name: challenge
-  data:
-    rest:
-      basePath: '/api'
   servlet:
     multipart:
       max-request-size: 250MB
