@@ -1,6 +1,7 @@
 package com.srsystems.challenge.city.service;
 
 import com.srsystems.challenge.city.domain.response.CityCountResponse;
+import com.srsystems.challenge.city.exception.ExistentIbgeId;
 import com.srsystems.challenge.csv.city.domain.StateIdMap;
 import com.srsystems.challenge.entity.City;
 import com.srsystems.challenge.city.domain.request.CityRequest;
@@ -40,14 +41,24 @@ public class CityServiceImpl implements CityService {
 
     @Override
     @Transactional
-    public boolean insert(CityRequest cityRequest) {
+    public boolean insert(CityRequest cityRequest) throws ExistentIbgeId {
         log.info("Method=insert, cityRequest={}", cityRequest);
+        if (isIbgeIdExistent(cityRequest)) {
+            throw new ExistentIbgeId();
+        }
+
         var map = stateIdMap.getMap();
         var state = map.get(cityRequest.getState());
         cityRequest.setStateId(state);
         City city = cityMapper.requestToCity(cityRequest);
+
         cityRepository.save(city);
         return city.getId() != null;
+    }
+
+    private boolean isIbgeIdExistent(CityRequest cityRequest) {
+        City cityExistent = cityRepository.findByIbgeId(cityRequest.getIbgeId());
+        return cityExistent != null;
     }
 
     @Override
