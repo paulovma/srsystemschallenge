@@ -2,6 +2,7 @@ package com.srsystems.challenge.csv.city.domain;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.Map;

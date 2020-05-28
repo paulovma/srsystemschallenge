@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface FileConverter<T> {
 
-    public List<T> make(MultipartFile file) throws IOException;
+    public List<T> make(String filename) throws IOException;
 }

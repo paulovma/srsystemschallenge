@@ -1,11 +1,14 @@
 package com.srsystems.challenge.entity;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.collect.ComparisonChain;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.function.Function;
 
 @Data
 @Entity
@@ -43,4 +46,21 @@ public class City {
     private String microRegion;
 
     private String mesoRegion;
+
+    private City(Long id) {
+        this.id = id;
+    }
+
+    public static City of(Long id) {
+        return new City(id);
+    }
+
+    public interface Square {
+        int calculate(int x);
+    }
+
+    public static void main(String[] args) {
+        Square f = (int x)->x*x;
+        System.out.println(f.calculate(5));
+    }
 }

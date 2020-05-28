@@ -1,5 +1,6 @@
 package com.srsystems.challenge.city.mapper;
 
+import com.srsystems.challenge.csv.city.batch.BatchImportCity;
 import com.srsystems.challenge.entity.City;
 import com.srsystems.challenge.city.domain.request.CityRequest;
 import com.srsystems.challenge.city.domain.response.CityResponse;
@@ -27,4 +28,10 @@ public interface CityMapper {
     @Mapping(target = "state", source = "state.uf")
     CityResponse cityToRequest(City city);
 
+    @Mappings({
+            @Mapping(target = "id", ignore = true),
+            @Mapping(target = "state.id", source = "stateId"),
+            @Mapping(target = "state.uf", source = "state")
+    })
+    City cityFromBatchImportCity(BatchImportCity batchImportCity);
 }
