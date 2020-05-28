@@ -6,8 +6,8 @@ spring:
       max-request-size: 250MB
       max-file-size: 250MB
   datasource:
-    username: challenge
-    password: 123123
+#    username: challenge
+#    password: 123123
     url: ${JDBC_DATASOURCE_URL}
 #    url: jdbc:postgresql://localhost:5432/challenge  batch:
     initialize-schema: always
