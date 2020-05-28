@@ -1,6 +1,6 @@
 package com.srsystems.challenge.config.rabbit;
 
-import com.srsystems.challenge.csv.receiver.CsvQueueReceiver;
+//import com.srsystems.challenge.csv.receiver.CsvQueueReceiver;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;

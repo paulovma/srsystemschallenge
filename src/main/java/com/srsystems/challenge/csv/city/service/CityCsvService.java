@@ -1,12 +1,12 @@
 package com.srsystems.challenge.csv.city.service;
 
 import com.srsystems.challenge.city.domain.CityRepository;
-import com.srsystems.challenge.csv.city.batch.BatchImportCity;
+//import com.srsystems.challenge.csv.city.batch.BatchImportCity;
 import com.srsystems.challenge.csv.city.exception.ExistentIbgeId;
 import com.srsystems.challenge.csv.city.factory.CityRequestFactory;
 import com.srsystems.challenge.csv.domain.CsvService;
 import com.srsystems.challenge.csv.domain.FileWriter;
-import com.srsystems.challenge.csv.receiver.CsvQueueReceiver;
+//import com.srsystems.challenge.csv.receiver.CsvQueueReceiver;
 import com.srsystems.challenge.entity.City;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -32,8 +32,8 @@ public class CityCsvService implements CsvService {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    @Autowired
-    private CsvQueueReceiver csvQueueReceiver;
+//    @Autowired
+//    private CsvQueueReceiver csvQueueReceiver;
 
     public CityCsvService(CityRepository cityRepository) {
         this.cityRepository = cityRepository;
