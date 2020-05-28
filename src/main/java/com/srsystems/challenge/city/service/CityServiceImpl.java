@@ -20,17 +20,14 @@ import java.util.List;
 @Slf4j
 public class CityServiceImpl implements CityService {
 
-    private final CityRepository cityRepository;
+    @Autowired
+    private CityRepository cityRepository;
 
-    private final CityMapper cityMapper;
+    @Autowired
+    private CityMapper cityMapper;
 
     @Autowired
     private StateIdMap stateIdMap;
-
-    public CityServiceImpl(CityRepository cityRepository, CityMapper cityMapper) {
-        this.cityRepository = cityRepository;
-        this.cityMapper = cityMapper;
-    }
 
     @Override
     @Transactional(readOnly = true)

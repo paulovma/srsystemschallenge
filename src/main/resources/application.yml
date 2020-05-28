@@ -6,10 +6,11 @@ spring:
       max-request-size: 250MB
       max-file-size: 250MB
   datasource:
-#    username: challenge
-#    password: 123123
+    driverClassName: org.postgresql.Driver
+#    username: qgvhylpuinqsev
+#    password: b952b9054da61ac24466da697de8f1616278396af237a2e470c923bd38573da3
+#    url: jdbc:postgresql://ec2-18-210-214-86.compute-1.amazonaws.com:5432/d3o0ihrqeacnid?user=qgvhylpuinqsev&password=b952b9054da61ac24466da697de8f1616278396af237a2e470c923bd38573da3
     url: ${JDBC_DATASOURCE_URL}
-#    url: jdbc:postgresql://localhost:5432/challenge  batch:
     initialize-schema: always
   jpa:
     open-in-view: false

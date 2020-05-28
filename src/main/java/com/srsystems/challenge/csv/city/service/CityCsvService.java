@@ -21,6 +21,7 @@ import java.io.IOException;
 @Service
 public class CityCsvService implements CsvService {
 
+    @Autowired
     private CityRepository cityRepository;
 
     @Autowired
@@ -34,10 +35,6 @@ public class CityCsvService implements CsvService {
 
 //    @Autowired
 //    private CsvQueueReceiver csvQueueReceiver;
-
-    public CityCsvService(CityRepository cityRepository) {
-        this.cityRepository = cityRepository;
-    }
 
     @Override
     @Transactional
