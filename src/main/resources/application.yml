@@ -1,7 +1,6 @@
 spring:
   flyway:
     enabled: true
-    locations: classpath:db/migrations
   application:
     name: challenge
   servlet:
