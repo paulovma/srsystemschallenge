@@ -1,6 +1,7 @@
 spring:
   flyway:
-    url: ${JDBC_DATASOURCE_URL}
+    enabled: true
+    locations: classpath:db/migrations
   application:
     name: challenge
   servlet:
