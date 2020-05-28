@@ -1,10 +1,10 @@
 package com.srsystems.challenge;
 
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+//import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnableBatchProcessing
+//@EnableBatchProcessing
 @SpringBootApplication
 public class App {
     public String getGreeting() {
