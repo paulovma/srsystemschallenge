@@ -58,6 +58,8 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web"
     compile 'org.springframework.boot:spring-boot-starter-security:2.1.2.RELEASE'
 
+    compile group: 'aopalliance', name: 'aopalliance', version: '1.0'
+
     compile group: 'org.springframework', name: 'spring-core', version: '5.2.0.RELEASE'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.0'
