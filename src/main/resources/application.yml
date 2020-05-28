@@ -1,4 +1,6 @@
 spring:
+  flyway:
+    url: ${JDBC_DATASOURCE_URL}
   application:
     name: challenge
   servlet:
