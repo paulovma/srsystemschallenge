@@ -41,7 +41,7 @@ public class CsvQueueReceiver {
     }
 
 
-    @RabbitListener(queues = {"test_queue"})
+//    @RabbitListener(queues = {"test_queue"})
     //o rollback eh feito automaticamente para as exceptions "unchecked" (RunTimeException)
     //quando tempos uma exception "checked" (Exception) , o rollback automatico nao acontece, entao precisamos explicitar para quais queremos que seja feito o rollback
 //    @Transactional(rollbackFor = IOException.class)

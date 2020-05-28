@@ -58,6 +58,10 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web"
     compile 'org.springframework.boot:spring-boot-starter-security:2.1.2.RELEASE'
 
+    compile group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.3.4.RELEASE'
+    compile group: 'org.springframework.amqp', name: 'spring-rabbit', version: '2.1.12.RELEASE'
+    compile group: 'org.springframework.batch', name: 'spring-batch-core', version: '4.0.4.RELEASE'
+
     //jwt
     compile "io.jsonwebtoken:jjwt-api:${jjwtVersion}"
     runtime "io.jsonwebtoken:jjwt-impl:${jjwtVersion}",
