@@ -129,5 +129,5 @@ test {
     useJUnitPlatform()
 }
 
-// Define the main class for the application
+// Define the main class for the application.
 mainClassName = 'com.srsystems.challenge.App'
