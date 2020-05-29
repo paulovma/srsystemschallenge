@@ -63,7 +63,6 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-core'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core'
-//https://srsystem.herokuapp.com/
 
     compile group: 'org.springframework.kafka', name: 'spring-kafka'
     compile group: 'org.springframework.amqp', name: 'spring-rabbit'
